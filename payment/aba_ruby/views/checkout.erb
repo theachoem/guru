@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="POST" action="https://checkout-sandbox.payway.com.kh/api/payment-gateway/v1/payments/purchase" id="aba_merchant_request">
+        <% create_transaction_params.each do |key, value| %>
+            <input name='<%= key %>' value='<%= value %>' />
+        <% end %>
+        <button type="submit">Checkout</button>
+    </form>
+</body>
+</html>
